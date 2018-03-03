@@ -57,7 +57,7 @@ Firefly.prototype.render = function(ctx, now){
   ctx.fill();
 }
 
-var max_fireflies = 500;
+var max_fireflies = 5000;
 var canvas = document.getElementById('can');
 var ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -73,7 +73,7 @@ var last_emit = 0;
 
 function render(){
   now = Date.now();
-  dt = (last - now) / 1000; 
+  dt = (last - now) / 150; 
   last = now;
   ctx.clearRect(0,0,w,h);
   fireflies.forEach(function(f){
